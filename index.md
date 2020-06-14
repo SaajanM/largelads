@@ -1,40 +1,17 @@
 ---
 title: Large Lads Inc.
+description: Join The Union!
 ---
-## Welcome to GitHub Pages
+## About
 
-You can use the [editor on GitHub](https://github.com/SaajanM/largelads.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+LargeLadsInc is a professional group of friends who host a Youtube channel and a Minecraft server.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Our goal is to provide QUALITY content for all to watch and enjoy. And as always, don't forget to join the union!
 
-### Markdown
+### Youtube
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In order to access our fresh off the press, piping hot, quality visual content please visit our youtube channel [here](https://www.youtube.com/channel/UCkBDQMLJEPbitLc2z1BWf-A).
 
-```markdown
-Syntax highlighted code block
+### Minecraft
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SaajanM/largelads.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+While you can't directly join our Minecraft server due to our stringent whitelisting policies, feel free to subscribe to our Youtube channel to watch the latest and greatest of Large Lads Inc's Minecraft adventure.
