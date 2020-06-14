@@ -4,7 +4,7 @@ description: Join The Union!
 ---
 ## About
 
-LargeLadsInc is a professional group of friends who host a Youtube channel and a Minecraft server.
+Large Lads Inc. is a professional group of friends who host a Youtube channel and a Minecraft server.
 
 Our goal is to provide QUALITY content for all to watch and enjoy. And as always, don't forget to join the union!
 
