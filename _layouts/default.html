@@ -21,17 +21,21 @@
             let pxString = window.getComputedStyle(header).paddingTop;
             let scrollRequired = parseFloat(pxString.substring(0, pxString.length - 2))
             if (document.body.scrollTop > scrollRequired || document.documentElement.scrollTop > scrollRequired) {
-                header.style.position = "fixed";
-                header.style.textAlign = "left";
                 header.style.padding = "1rem";
-                document.getElementById("description").style.display = "none";
+                document.getElementById("description").style.opacity = "0";
+                document.getElementById("description").style.fontSize = "0rem";
+                document.getElementById("description").style.margin = "0rem";
                 document.getElementById("title").style.fontSize = "1.5rem";
+                document.getElementById("title").style.margin = "0rem";
+                document.getElementById('page-header-spacer').style.height = "0px";
             } else {
-                header.style.position = "";
-                header.style.textAlign = "center";
-                header.style.padding = "5rem 6rem";
-                document.getElementById("description").style.display = "";
-                document.getElementById("title").style.fontSize = "3.25rem";
+                document.getElementById('page-header-spacer').style.height = window.getComputedStyle(document.getElementById('header')).height;
+                header.style.padding = "";
+                document.getElementById("description").style.opacity = "";
+                document.getElementById("description").style.fontSize = "";
+                document.getElementById("description").style.margin = "";
+                document.getElementById("title").style.fontSize = "";
+                document.getElementById("title").style.margin = "";
             }
         };
     </script>
@@ -47,11 +51,11 @@
 </head>
 
 <body>
-    <header class="page-header" id="header" role="banner" style="transition: ease-in-out; width: 100%">
-        <h1 class="project-name" id="title">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-        <h2 class="project-tagline" id="description">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    <header class="page-header" id="header" role="banner" style="transition: all 0.5s ease 0s; width: 100%; position:fixed;">
+        <h1 class="project-name" id="title" style="transition: all 0.5s ease 0s;">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <h2 class="project-tagline" id="description" style="transition: all 0.5s ease 0s;">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     </header>
-
+    <div id="page-header-spacer" style="transition: all 0.5s ease 0s; width: 100%;">&nbsp;</div>
     <main id="content" class="main-content" role="main">
         {{ content }}
 
