@@ -51,10 +51,10 @@
             })[0];
             ss = parseFloat(ss.substring(0, ss.length - 2));
         }
-        $('document').ready(() => {
+        window.onload = () => {
             calculateSS();
             document.getElementById('page-header-spacer').style.height = (2 * ss + 8.6625) + "rem";
-        });
+        }
         window.onresize = () => {
             calculateSS();
         }
