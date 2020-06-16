@@ -16,6 +16,8 @@ Large Lads Inc. is a professional group of friends who host a Youtube channel an
 Our goal is to provide QUALITY content for all to watch and enjoy. And as always, don't forget to join the union!
 
 ### Youtube
+We here at Large Lads Inc. pride ourselves on our creations. From notable songs such as Balling Like Obama to our hit series Law Firm Fridays and Thrifty Thursdays, we pour dozens of hours into each video, just for your enjoyment.
+
 In order to access our fresh off the press, piping hot, quality visual content please visit our youtube channel [here](https://www.youtube.com/channel/UCkBDQMLJEPbitLc2z1BWf-A) or view some of our top videos below.
 
 <div class="video-slider" style="display: block;height:fit-content;background-image:linear-gradient(120deg, #155799, #159957);margin: 0px -2000px;padding: 0px 2000px;text-align:center">
@@ -27,3 +29,5 @@ In order to access our fresh off the press, piping hot, quality visual content p
 ### Minecraft
 
 While you can't directly join our Minecraft server due to our stringent whitelisting policies, feel free to subscribe to our Youtube channel to watch the latest and greatest of Large Lads Inc's Minecraft adventure.
+
+Currently, Large Lads Inc. is experiencing a skyblock renaissance! Through the coming weeks we will be delving deep into our very own vanilla skyblock server.
