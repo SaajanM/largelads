@@ -18,7 +18,7 @@ Our goal is to provide QUALITY content for all to watch and enjoy. And as always
 ### Youtube
 In order to access our fresh off the press, piping hot, quality visual content please visit our youtube channel [here](https://www.youtube.com/channel/UCkBDQMLJEPbitLc2z1BWf-A) or view some of our top videos below.
 
-<div class="video-slider" style="display: block; width:100%;height:fit-content;background-image:linear-gradient(120deg, #155799, #159957);">
+<div class="video-slider" style="display: block;height:fit-content;background-image:linear-gradient(120deg, #155799, #159957);margin: 0px -2000px;padding: 0px 2000px;text-align:center">
     {% for video in page.videos %}
       {% include video.html vid=video %}
     {% endfor %}
