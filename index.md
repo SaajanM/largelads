@@ -20,9 +20,7 @@ In order to access our fresh off the press, piping hot, quality visual content p
 
 <div class="video-slider" style="display: block; width:100%;height:fit-content;background-image:linear-gradient(120deg, #155799, #159957);">
     {% for video in page.videos %}
-    <div class="video" style="display: inline-block;width: fit-content;height: min-content;padding:1.75rem 0rem;">
-        <a href={{ video.url }}><img src={{ video.thumbnail }} style="height:8rem; width:auto;"></a>
-    </div>
+      {% include video.html vid=video %}
     {% endfor %}
 </div>
 
