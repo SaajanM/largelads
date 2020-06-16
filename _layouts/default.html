@@ -35,6 +35,7 @@
                     let res = {};
                     res["type"] = key;
                     res["value"] = parseFloat(value);
+
                     return res;
                 });
                 for (let c in conditions) {
@@ -52,7 +53,7 @@
         }
         $('document').ready(() => {
             calculateSS();
-            document.getElementById('page-header-spacer').style.height = (5.75 + ss) + "rem";
+            document.getElementById('page-header-spacer').style.height = (2 * ss + 8.6625) + "rem";
         });
         window.onresize = () => {
             calculateSS();
@@ -72,7 +73,7 @@
                 document.getElementById('page-header-spacer').style.height = (2.75 + ss) + "rem";
 
             } else {
-                document.getElementById('page-header-spacer').style.height = (5.75 + ss) + "rem";
+                document.getElementById('page-header-spacer').style.height = (2 * ss + 8.6625) + "rem";
                 header.style.padding = "";
                 document.getElementById("description").style.opacity = "";
                 document.getElementById("description").style.fontSize = "";
