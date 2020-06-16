@@ -16,9 +16,47 @@
     </script>
     {% endif %}
     <script>
+        let ss;
+
+        function calculateSS() {
+            ss = document.styleSheets[0].cssRules;
+            ss = Array.from(ss).filter(x => x.constructor.name == "CSSMediaRule");
+            ss = ss.filter(x => {
+                let condition = x.conditionText;
+                condition = condition.substring(11, condition.length);
+                let conditions = condition.split(" and ");
+                let min = 0;
+                let max = Infinity;
+                let screenSize = $(window).width() / parseFloat($("html").css("font-size"));
+                conditions = conditions.map(c => {
+                    let pair = c.substring(1, c.length - 3).split(": ");
+                    let key = pair[0];
+                    let value = pair[1];
+                    let res = {};
+                    res["type"] = key;
+                    res["value"] = parseFloat(value);
+                    return res;
+                });
+                for (let c in conditions) {
+                    if (conditions[c].type == "min-width") min = conditions[c].value;
+                    if (conditions[c].type == "max-width") max = conditions[c].value;
+                }
+                return screenSize > min && screenSize < max;
+            });
+            ss = ss.filter(x => {
+                return x.cssRules[0].selectorText == ".page-header";
+            }).map(x => {
+                return x.cssRules[0].style.paddingTop;
+            })[0];
+            ss = parseFloat(ss.substring(0, ss.length - 2));
+        }
         $('document').ready(() => {
-            document.getElementById('page-header-spacer').style.height = (2 * 306.594 / 29) + "rem";
+            calculateSS();
+            document.getElementById('page-header-spacer').style.height = (5.75 + ss) + "rem";
         });
+        window.onresize = () => {
+            calculateSS();
+        }
         window.onscroll = () => {
             let header = document.getElementById("header");
             if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
@@ -30,40 +68,11 @@
                 document.getElementById("title-container").style.margin = "0rem";
                 document.getElementById("title-container").style.transform = "";
                 document.getElementById("title").style.transform = "";
-                let ss = document.styleSheets[0].cssRules;
-                ss = Array.from(ss).filter(x => x.constructor.name == "CSSMediaRule");
-                ss = ss.filter(x => {
-                    let condition = x.conditionText;
-                    condition = condition.substring(11, condition.length);
-                    let conditions = condition.split(" and ");
-                    let min = 0;
-                    let max = Infinity;
-                    let screenSize = $(window).width() / parseFloat($("html").css("font-size"));
-                    conditions = conditions.map(c => {
-                        let pair = c.substring(1, c.length - 3).split(": ");
-                        let key = pair[0];
-                        let value = pair[1];
-                        let res = {};
-                        res["type"] = key;
-                        res["value"] = parseFloat(value);
-                        return res;
-                    });
-                    for (let c in conditions) {
-                        if (conditions[c].type == "min-width") min = conditions[c].value;
-                        if (conditions[c].type == "max-width") max = conditions[c].value;
-                    }
-                    return screenSize > min && screenSize < max;
-                });
-                ss = ss.filter(x => {
-                    return x.cssRules[0].selectorText == ".page-header";
-                }).map(x => {
-                    return x.cssRules[0].style.paddingTop;
-                })[0];
-                ss = parseFloat(ss.substring(0, ss.length - 2));
-                document.getElementById('page-header-spacer').style.height = (5.75 + ss) + "rem";
+
+                document.getElementById('page-header-spacer').style.height = (2.75 + ss) + "rem";
 
             } else {
-                document.getElementById('page-header-spacer').style.height = (2 * 306.594 / 29) + "rem";
+                document.getElementById('page-header-spacer').style.height = (5.75 + ss) + "rem";
                 header.style.padding = "";
                 document.getElementById("description").style.opacity = "";
                 document.getElementById("description").style.fontSize = "";
