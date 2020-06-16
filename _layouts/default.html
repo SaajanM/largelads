@@ -38,7 +38,7 @@
                 document.getElementById("description").style.opacity = "";
                 document.getElementById("description").style.fontSize = "";
                 document.getElementById("description").style.margin = "";
-                document.getElementById("title").style.fontSize = "";
+                document.getElementById("title").style.fontSize = "3.25rem";
                 document.getElementById("title-container").style.margin = "";
                 document.getElementById("title-container").style.transform = "translateX(50%)";
                 document.getElementById("title").style.transform = "translateX(-50%)";
@@ -56,7 +56,7 @@
 <body>
     <header class="page-header" id="header" role="banner" style="transition: all 0.5s ease 0s; width: 100%; position:fixed;text-align: inherit;">
         <h1 class="project-name" id="title-container" style="transition: all 0.5s ease 0s;display: block;transform: translateX(50%);font-size: inherit;">
-            <span id="title" style="transition: all 0.5s ease 0s;font-weight: 400;display: inline-block;transform: translateX(-50%);">{{ page.title | default: site.title | default: site.github.repository_name }}</span>
+            <span id="title" style="transition: all 0.5s ease 0s;font-weight: 400;font-size:3.25rem;display: inline-block;transform: translateX(-50%);">{{ page.title | default: site.title | default: site.github.repository_name }}</span>
         </h1>
         <h2 class="project-tagline" id="description" style="transition: all 0.5s ease 0s;text-align:center;">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     </header>
