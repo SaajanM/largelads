@@ -19,9 +19,6 @@
         $('document').ready(() => {
             document.getElementById('page-header-spacer').style.height = (2 * 306.594 / 29) + "rem";
         });
-        $(window).load(() => {
-            $("body").removeClass("preload");
-        });
         window.onscroll = () => {
             let header = document.getElementById("header");
             if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
