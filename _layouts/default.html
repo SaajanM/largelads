@@ -18,7 +18,9 @@
     <script>
         window.onscroll = () => {
             let header = document.getElementById("header");
-            if (document.body.scrollTop > window.getComputedStyle(header).paddingTop || document.documentElement.scrollTop > window.getComputedStyle(header).paddingTop) {
+            let pxString = window.getComputedStyle(header).paddingTop;
+            let scrollRequired = parseFloat(pxString.substring(0, pxString.length - 2))
+            if (document.body.scrollTop > scrollRequired || document.documentElement.scrollTop > scrollRequired) {
                 header.style.position = "fixed";
                 header.style.textAlign = "left";
                 header.style.padding = "1rem";
