@@ -54,25 +54,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <style>
-        .preload * {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -ms-transition: none !important;
-            -o-transition: none !important;
-            transition: none !important;
-        }
-    </style>
 </head>
 
-<body class="preload">
-    <header class="page-header" id="header" role="banner" style="width: 100%; position:fixed;text-align: inherit;transition: all 0.5s ease 0s; ">
-        <h1 class="project-name" id="title-container" style="display: block;transform: translateX(50%);font-size: inherit;transition: all 0.5s ease 0s;">
-            <span id="title" style="font-weight: 400;font-size:3.25rem;display: inline-block;transform: translateX(-50%);transition: all 0.5s ease 0s;">{{ page.title | default: site.title | default: site.github.repository_name }}</span>
+<body>
+    <header class="page-header" id="header" role="banner" style="width: 100%; position:fixed;text-align: inherit;transition: padding 0.5s ease 0s; ">
+        <h1 class="project-name" id="title-container" style="display: block;transform: translateX(50%);font-size: inherit;transition: all 0.5s ease 0s;transition-property: margin, transform;">
+            <span id="title" style="font-weight: 400;font-size:3.25rem;display: inline-block;transform: translateX(-50%);transition: all 0.5s ease 0s;transition-property: font-size, transform;">{{ page.title | default: site.title | default: site.github.repository_name }}</span>
         </h1>
-        <h2 class="project-tagline" id="description" style="text-align:center;transition: all 0.5s ease 0s;">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+        <h2 class="project-tagline" id="description" style="text-align:center;transition: all 0.5s ease 0s;transition-property: opacity, font-size, margin;">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     </header>
-    <div id="page-header-spacer" style=" width: 100%;transition: all 0.5s ease 0s;">&nbsp;</div>
+    <div id="page-header-spacer" style=" width: 100%;transition: height 0.5s ease 0s;">&nbsp;</div>
     <main id="content" class="main-content" role="main">
         {{ content }}
 
