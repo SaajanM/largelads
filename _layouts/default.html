@@ -85,6 +85,16 @@
                 document.getElementById("title").style.transform = "translateX(-50%)";
             }
         };
+
+        function setVideoDesc(targetVideo) {
+            let title = targetVideo.attributes.vidtitle.value;
+            document.getElementById("video_desc").innerHtml = title;
+            document.getElementById("video_desc").style.fontSize = "";
+        }
+
+        function removeDesc() {
+            document.getElementById("video_desc").style.fontSize = "";
+        }
     </script>
     <meta charset="UTF-8"> {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
