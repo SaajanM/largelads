@@ -27,7 +27,7 @@ In order to access our fresh off the press, piping hot, quality visual content p
   {% for video in page.videos %}
     {% include video.html vid=video %}
   {% endfor %}
-  <h2 id="video_desc" style="padding-bottom:0rem;opacity:0.7;font-size:0rem;transition: all 0.25s ease 0s; transition-property:font-size, padding-bottom;color:white"></h2>
+  <h2 id="video_desc" style="padding-bottom:0rem;opacity:0.7;font-size:0rem;transition: all 0.25s ease 0s; transition-property:font-size, padding-bottom;color:white">Placeholder</h2>
 </div>
 
 ### Minecraft
