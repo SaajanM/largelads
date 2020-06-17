@@ -90,10 +90,11 @@
             let title = targetVideo.attributes.vidtitle.value;
             document.getElementById("video_desc").innerHtml = title;
             document.getElementById("video_desc").style.fontSize = "";
+            console.log(title);
         }
 
         function removeDesc() {
-            document.getElementById("video_desc").style.fontSize = "";
+            document.getElementById("video_desc").style.fontSize = "0rem";
         }
     </script>
     <meta charset="UTF-8"> {% seo %}
