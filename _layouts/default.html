@@ -107,7 +107,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 </head>
 
-<body style="overflow-x: hidden;">
+<body style="overflow-x: hidden;width:100vw">
     <header class="page-header" id="header" role="banner" style="width: 100%; position:fixed;text-align: inherit;transition: padding 0.5s ease 0s; ">
         <h1 class="project-name" id="title-container" style="display: block;transform: translateX(50%);font-size: inherit;transition: all 0.5s ease 0s;transition-property: margin, transform;">
             <span id="title" style="font-weight: 400;font-size:2.5rem;display: inline-block;transform: translateX(-50%);transition: all 0.5s ease 0s;transition-property: font-size, transform;">{{ page.title | default: site.title | default: site.github.repository_name }}</span>
